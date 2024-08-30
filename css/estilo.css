@@ -1,6 +1,6 @@
 
 h1 {
-    color: red;
+    color: rgb(21, 226, 134);
     font-size: 24px;
     text-align: center;
 } /* fim h1 */
@@ -28,8 +28,28 @@ ul li {
 
 .titulo {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 22pt;
     color: midnightblue;
     text-align: center;
     margin-bottom: 4px;
+    font-weight: bold;
+}
+.titulo1 {
+    font-size: 22pt;
+}
+.titulo3 {
+    font-size: 16pt;
+}
+
+.texto-simples {
+    text-align: justify;
+    font-size: 12pt;
+}
+
+.botao {
+    font-weight: bold;
+    padding: 4px;
+}
+
+.botao-secondario {
+    background-color: rgb(176, 176, 176);
 }
