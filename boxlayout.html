@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divs</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+    <ul class="menu menu-inline">
+        <li class="menu-item"><a href="index.html">Página Inicial</a></li>
+        <li class="menu-item"><a href="contato.html">Contato</a></li>
+        <li class="menu-item"><a href="cardapio.html">Cardápio</a></li>
+        <li class="menu-item"><a href="boxlayout.html">Box Layout</a></li>
+    </ul>
+    <h1>O que são divs</h1>
+    <p>Divs são a contração de divisões, separação, containers ou organizadores.</p>
+    <p>Em geral podemos fazer qualquer coisa com divs e css, é possível criar caixas organizadoras (containers), inserir planos de fundo, imitar elementos HTML entre outros mains.</p>
+    <p>Sua principal função no código é dar uma melhor organização flexível para o desenvolvedor e permitir que ele organize os elementos visuais de forma mais profissional.</p>
+    <p>Veja alguns Exemplos</p>
+    
+    <div class="container bg-primary">
+        <h3>Caixas de organização</h3>
+        <p>Muito úteis seguindo a lógica de containers</p>
+        <code>
+            &#60;div class="container bg-primary"&#62;&#60;/div	&#62;
+            <br/>
+            .container {
+                margin: 4px;
+                padding: 5px;
+            }
+        </code>
+    </div>
+    <h3>Display Flex</h3>
+    <div>
+        <p>Elemento 1</p>
+        <p>Elemento 2</p>
+        <p>Elemento 3</p>
+    </div>
+
+    <div class="linha">
+        <div class="container bg-primary" style="width: 200px; height: 200px;">
+            <p>Uma pequena caixa de 200x200px</p>
+        </div>
+        <div class="container bg-secondary" style="width: 200px; height: 200px;">
+            <p>Uma pequena caixa de 200x200px</p>
+        </div>
+        <div class="container bg-success" style="width: 200px; height: 200px;">
+            <p>Uma pequena caixa de 200x200px</p>
+        </div>
+
+        <div class="container bg-danger" style="width: 200px; height: 200px;">
+            <p>Uma pequena caixa de 200x200px</p>
+        </div>
+
+    </div><!-- end linha-->
+
+    <!-- Conceito de cards -->
+    <h3>Conceito de cards</h3>
+
+    <div class="container linha">
+        <div class="card bg-primary">
+            <h4 class="card-title">Primeiro Item</h4>
+            <img src="imagens/caramelo.jfif" alt="Caramelo" title="Caramelo" />
+            <div class="card-body">
+                <p>Sou viralatas caramelo, perseguidor de motoqueiros e ciclistas...</p>
+                <a class="botao botao-primário" href="#" >Saiba mais</a>
+            </div>
+        </div>
+
+        <div class="card bg-secondary">
+            <h4 class="card-title">Segundo Item</h4>
+            <img src="imagens/coragem.jpg" alt="Coragem" title="Coragem" />
+            <div class="card-body">
+                <p>Coragem era um desenho animado exibido pelo SBT que fez muito sucesso</p>
+                <a class="botao botao-primário" href="#" >Saiba mais</a>
+            </div>
+        </div>
+
+        <div class="card bg-danger">
+            <h4 class="card-title">Terceiro Item</h4>
+            <img src="imagens/entrigado.jpg" alt="Entrigado" title="Entrigado" />
+            <div class="card-body">
+                <p>Geralmente quando algo nos deixa sem reação ou pensativos dizemos que estamos intrigados.</p>
+                <a class="botao botao-primário" href="#" >Saiba mais</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

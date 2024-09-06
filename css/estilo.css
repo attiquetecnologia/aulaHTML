@@ -34,6 +34,8 @@ form {
 }
 
 .botao {
+    text-decoration: unset;
+    color: #000;
     font-weight: bold;
     padding: 4px;
 }
@@ -43,7 +45,8 @@ form {
 }
 
 .botao-primário {
-    background-color: rgb(115, 113, 250);
+    background-color: rgb(53, 50, 179);
+    color: white;
 }
 
 .bg-primary {
@@ -62,8 +65,48 @@ form {
     background-color: rgb(255, 172, 172);
 }
 
+.menu {
+    background-color: #eeeeee;
+    list-style: none;
+    margin: 2px 2px 2px 2px;
+    padding: 5px 5px 5px 5px;
+}
+
+.menu-inline {
+    display: flex;
+}
+
+.menu .menu-item {
+    padding: 4px;
+}
+
 .container {
     margin: 4px;
-    padding: 5px;
     align-items: center;
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    margin: 4px;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.card>.card-img, .card>img {
+    width: 200px;
+    height: 200px;
+}
+
+.card .card-title{
+    font-weight: bold;
+    text-align: center;
+}
+
+.card .card-body{
+   
 }
