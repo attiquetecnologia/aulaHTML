@@ -1,0 +1,52 @@
+
+body{
+    background-color: silver;
+}
+
+.bg-primary {
+    background-color: rgb(187, 223, 255);
+}
+
+.bg-secondary {
+    background-color: rgb(192, 192, 192);
+}
+
+.bg-success {
+    background-color: rgb(200, 255, 197);
+}
+
+.bg-danger {
+    background-color: rgb(255, 172, 172);
+}
+
+.titulo {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.textos {
+    text-align: justify;
+    margin: 4px;
+    text-wrap: wrap;
+}
+
+.content {
+    margin: 20px;
+    padding: 5px;
+    background-color: whitesmoke;
+}
+
+.container {
+    margin: 5px;
+    padding: 5px;
+}
+
+.container-flex {
+    display: flex;
+}
+
+.image1 {
+    width: 100px;
+    height: 100px;
+}
