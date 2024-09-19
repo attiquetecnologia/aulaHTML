@@ -1,4 +1,4 @@
-from flask import (Flask, request) # Importa o flask
+from flask import (Flask, render_template, request) # Importa o flask
 
 app = Flask(__name__) # cria uma instância
 
@@ -33,12 +33,9 @@ def personagens(): # função responsável pela página
 
 @app.route("/potencial/<int:numero>/<int:potencia>", methods=("GET", ))
 def potencial(numero, potencia):
-    return f"<h1>{numero}^{potencia} = {numero**potencia}</h1>"
+    return render_template('potencial.html', numero=numero, potencia=potencia)
 
 @app.route("/tabuada/<int:numero>", methods=("GET", ))
 def tabuada(numero):
-    tag = '<ul>'
-    for p in range(1,11):
-        tag += f"<li>{numero} x {p} = {numero*p}</li>"
-    tag += "</ul>"
-    return tag
+    
+    return render_template('tabuada.html', numero=numero)
