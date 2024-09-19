@@ -2,9 +2,8 @@ from flask import (Flask, request) # Importa o flask
 
 app = Flask(__name__) # cria uma instância
 
-@app.route("/", methods=('GET',)) # Assina uma rota
-def index(): # função responsável pela página
-    nome = request.args.get('nome') # use o seu nome
+@app.route("/<string:nome>", methods=('GET',)) # Assina uma rota
+def index(nome): # função responsável pela página
     # HTML retornado
     return f"""<h1>Página inicial</h1>
         <p>Olá {nome}, que nome bonito!
@@ -31,3 +30,15 @@ def personagens(): # função responsável pela página
     return f"""<h1>Página inicial</h1>
         <ul><li>{p1}</li><li>{p2}</li><li>{p3}</li></ul>
     """ 
+
+@app.route("/potencial/<int:numero>/<int:potencia>", methods=("GET", ))
+def potencial(numero, potencia):
+    return f"<h1>{numero}^{potencia} = {numero**potencia}</h1>"
+
+@app.route("/tabuada/<int:numero>", methods=("GET", ))
+def tabuada(numero):
+    tag = '<ul>'
+    for p in range(1,11):
+        tag += f"<li>{numero} x {p} = {numero*p}</li>"
+    tag += "</ul>"
+    return tag
