@@ -24,9 +24,9 @@ def sobre():
 
 @app.route("/personagens", methods=('GET',)) # Assina uma rota
 def personagens(): # função responsável pela página
-    p1 = 'Goku' # use o seu nome
-    p2 = "Mega-Man"
-    p3 = "Super Patos"
+    p1 = request.args.get('p1') # use o seu nome
+    p2 = request.args.get('p2')
+    p3 = request.args.get('p3')
     # HTML retornado
     return f"""<h1>Página inicial</h1>
         <ul><li>{p1}</li><li>{p2}</li><li>{p3}</li></ul>
