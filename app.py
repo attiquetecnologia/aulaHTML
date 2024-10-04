@@ -37,6 +37,15 @@ def area():
     comprimento = float(request.args.get("comprimento"))
     return f"<h1>L={largura}*C={comprimento} -> Área={largura*comprimento}"
 
+@app.route("/parimpar", methods=("GET", ))
+def parimpar():
+    numero = float(request.args.get("numero"))
+    if numero % 2 == 0: 
+        return f"<h1>O número {numero} é par!</h1>"
+    else:
+        return f"<h1>O número {numero} é ímpar!</h1>"
+
+
 @app.route("/potencial/<int:numero>/<int:potencia>", methods=("GET", ))
 def potencial(numero, potencia):
     return render_template('potencial.html', numero=numero, potencia=potencia)
