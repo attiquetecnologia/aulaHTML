@@ -31,6 +31,12 @@ def personagens(): # função responsável pela página
         <ul><li>{p1}</li><li>{p2}</li><li>{p3}</li></ul>
     """ 
 
+@app.route("/area", methods=("GET", ))
+def area():
+    largura = float(request.args.get("largura"))
+    comprimento = float(request.args.get("comprimento"))
+    return f"<h1>L={largura}*C={comprimento} -> Área={largura*comprimento}"
+
 @app.route("/potencial/<int:numero>/<int:potencia>", methods=("GET", ))
 def potencial(numero, potencia):
     return render_template('potencial.html', numero=numero, potencia=potencia)
