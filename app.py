@@ -45,6 +45,11 @@ def parimpar():
     else:
         return f"<h1>O número {numero} é ímpar!</h1>"
 
+@app.route("/nome", methods=("GET", ))
+def nome():
+    nome = str(request.args.get("nome"))
+    sobrenome = str(request.args.get("sobrenome"))
+    return f"<h1>Olá, sr(a) {sobrenome}, {nome}.</h1>"
 
 @app.route("/potencial/<int:numero>/<int:potencia>", methods=("GET", ))
 def potencial(numero, potencia):
