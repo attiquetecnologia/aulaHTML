@@ -36,9 +36,8 @@ def area(largura: float, comprimento: float):
 
     return f"<h1>L={largura}*C={comprimento} -> Área={largura*comprimento}"
 
-@app.route("/parimpar", methods=("GET", ))
-def parimpar():
-    numero = float(request.args.get("numero"))
+@app.route("/parimpar/<float:numero>", methods=("GET", ))
+def parimpar(numero):
     if numero % 2 == 0: 
         return f"<h1>O número {numero} é par!</h1>"
     else:
