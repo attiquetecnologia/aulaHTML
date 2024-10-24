@@ -59,7 +59,7 @@ def tabuada(numero = None): # None desobriga o valor
 
     return render_template('tabuada.html', numero=numero)
 
-@app.route("/calculo_juros")
+@app.route("/calculo_juros", methods=("GET", ))
 def calculo_joros():
     total = 0
     if 'meses' in request.args:
@@ -70,3 +70,15 @@ def calculo_joros():
         total = (investimento+aporte*meses)*juros/100
 
     return render_template('calculo_juros.html', total=total)
+
+@app.route("/login", methods=("GET", ))
+def login():
+    if 'usuario' in request.args:
+        usuario = request.args.get('usuario')
+        senha = request.args.get("senha")
+        if usuario == "aluno@senai.br" and senha == "senai":
+            return "<h1>Usuário logado com sucesso!</h1>"
+        else:
+            return "<h1>Usuário ou senha incorretos!</h1>"
+    
+    return render_template('login.html')
