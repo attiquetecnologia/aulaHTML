@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h1>Calculo de Juros</h1>
+<form method="get">
+    <label>Investimento Inicial</label>
+    <input type="number" name="investimento_inicial" />
+    <br>
+    <label>Juros ao ano</label>
+    <input type="number" name="juros" />
+    <br>
+    <label>Aporte Mensal</label>
+    <input type="number" name="aporte" />
+    <br>
+    <label>Tempo de investimento em meses</label>
+    <input type="number" name="meses" />
+    <br>
+    <input type="submit" />
+</form>
+{% if total != 0 %}
+{{ total }}
+{% endif %}
+{% endblock %}

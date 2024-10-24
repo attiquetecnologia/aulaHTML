@@ -1,13 +1,12 @@
-from flask import (Flask, render_template, request) # Importa o flask
+from flask import (Flask, render_template, request, url_for) # Importa o flask
 
 app = Flask(__name__) # cria uma instância
 
+@app.route("/")
 @app.route("/<string:nome>", methods=('GET',)) # Assina uma rota
-def index(nome): # função responsável pela página
+def index(nome=None): # função responsável pela página
     # HTML retornado
-    return f"""<h1>Página inicial</h1>
-        <p>Olá {nome}, que nome bonito!
-    """ 
+    return render_template('index.html')
 
 @app.route("/contato", methods=('GET',))
 def contato():
@@ -51,7 +50,23 @@ def nome(nome, sobrenome):
 def potencial(numero, potencia):
     return render_template('potencial.html', numero=numero, potencia=potencia)
 
-@app.route("/tabuada/<int:numero>", methods=("GET", ))
-def tabuada(numero):
+@app.route("/tabuada")
+@app.route("/tabuada/<numero>", methods=("GET", ))
+def tabuada(numero = None): # None desobriga o valor
     
+    if 'numero' in request.args: # se argumento existir
+        numero = request.args.get('numero') # atualiza numero
+
     return render_template('tabuada.html', numero=numero)
+
+@app.route("/calculo_juros")
+def calculo_joros():
+    total = 0
+    if 'meses' in request.args:
+        investimento = float(request.args.get('investimento_inicial'))
+        juros = float(request.args.get('juros'))
+        aporte = float(request.args.get('aporte'))
+        meses = float(request.args.get('meses'))
+        total = (investimento+aporte*meses)*juros/100
+
+    return render_template('calculo_juros.html', total=total)
