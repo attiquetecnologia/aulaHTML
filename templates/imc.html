@@ -1,0 +1,17 @@
+<form>
+    <label>Peso</label>
+    <input type="number" name="peso" step=".01" />
+    <br>
+    <label>Altura</label>
+    <input type="number" name="altura" step=".01" />
+    <input type="submit" />
+</form>
+{% if imc !=0 %}
+<h1>Seu IMC é {{ imc }}</h1>
+</p>IMC	Classificação	Obesidade (grau)<p>
+<p>Menor que 18,5	Magreza	0</p> 
+Entre 18,5 e 24,9	Normal	0
+Entre 25,0 e 29,9	Sobrepeso	I
+Entre 30,0 e 39,9	Obesidade	II
+Maior que 40,0	Obesidade Grave	III
+{% endif %}

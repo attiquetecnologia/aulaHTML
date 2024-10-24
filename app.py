@@ -82,3 +82,13 @@ def login():
             return "<h1>Usuário ou senha incorretos!</h1>"
     
     return render_template('login.html')
+
+@app.route("/imc")
+def imc():
+    imc = 0
+    if request.args:
+        peso = float(request.args.get('peso'))
+        altura = float(request.args.get('altura'))
+        imc = peso/(altura**altura)
+    
+    return render_template('imc.html', imc=imc)
