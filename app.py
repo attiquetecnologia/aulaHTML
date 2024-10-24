@@ -55,7 +55,7 @@ def potencial(numero, potencia):
 def tabuada(numero = None): # None desobriga o valor
     
     if 'numero' in request.args: # se argumento existir
-        numero = request.args.get('numero') # atualiza numero
+        numero = int(request.args.get('numero')) # atualiza numero
 
     return render_template('tabuada.html', numero=numero)
 
