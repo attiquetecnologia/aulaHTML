@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabela de Cronograma</title>
+</head>
+<body>
+
+    <h2>Cronograma Semanal do Curso</h2>
+    <p>A seguir, a programação das disciplinas do curso:</p>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Data</th>
+            <th>Manhã</th>
+            <th>Tarde</th>
+            <th>Noite</th>
+        </tr>
+        <tr>
+            <td>Segunda-feira</td>
+            <td>Desenvolvimento Front-end</td>
+            <td>Lógica de Programação</td>
+            <td>Janela</td>
+        </tr>
+        <tr>
+            <td>Terça-feira</td>
+            <td>UX/UI Design</td>
+            <td>Banco de Dados</td>
+            <td>Estruturas de Dados</td>
+        </tr>
+        <tr>
+            <td>Quarta-feira</td>
+            <td>Desenvolvimento Front-end</td>
+            <td>Lógica de Programação</td>
+            <td>Janela</td>
+        </tr>
+
+        <tr>
+            <td>Quinta-feira</td>
+            <td>Matemática Discreta</td>
+            <td>Cálculo III</td>
+            <td>Física II</td>
+        </tr>
+        <tr>
+            <td>Sexta-feira</td>
+            <td>Janela</td>
+            <td>Janela</td>
+            <td>Janela</td>
+        </tr>
+    </table>
+
+    <h2>Calendário com Mesclagem</h2>
+    <p>Utilizando `colspan` e `rowspan` para otimizar o layout.</p>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Dia</th>
+            <th>Manhã</th>
+            <th>Tarde</th>
+        </tr>
+        <tr>
+            <td>Segunda-feira</td>
+            <td>Front-end</td>
+            <td>Lógica</td>
+        </tr>
+        <tr>
+            <td>Terça-feira</td>
+            <td colspan="2" style="text-align: center;">Evento de Inovação</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Quarta-feira</td>
+            <td>Front-end</td>
+            <td>Lógica</td>
+        </tr>
+        <tr>
+            <td>Front-end (Continuação)</td>
+            <td>Lógica (Continuação)</td>
+        </tr>
+    </table>
+
+    <h2>Tabela com Cores (`bgcolor`)</h2>
+    <p>Exemplo demonstrativo de formatação de cores diretamente no HTML.</p>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr bgcolor="#c2e0ff">
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Disponibilidade</th>
+        </tr>
+        <tr>
+            <td>Monitor</td>
+            <td>R$ 900,00</td>
+            <td bgcolor="#c2f0c2">Em Estoque</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>R$ 120,00</td>
+            <td bgcolor="#ffc2c2">Esgotado</td>
+        </tr>
+    </table>
+</body>
+</html>
