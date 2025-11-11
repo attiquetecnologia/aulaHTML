@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela CSS</title>
+    <style>
+        table, th, td {
+            padding: 4px;
+        }
+        th {
+            background-color: silver;
+            font-weight: bold;
+        }
+        .status {
+            font-weight: bold;
+            text-align: center;
+        }
+        .status.status-ok {
+            background-color: greenyellow;
+        }
+        .status.status-vazio {
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela CSS</h1>
+    <table>
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Disponibilidade</th>
+        </tr>
+        <tr>
+            <td>Monitor</td>
+            <td>R$ 900,00</td>
+            <td class="status status-ok">Em Estoque</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>R$ 120,00</td>
+            <td class="status status-vazio">Esgotado</td>
+        </tr>
+    </table>
+</body>
+</html>
