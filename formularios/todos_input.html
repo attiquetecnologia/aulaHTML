@@ -1,15 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todos os INPUT FORMS</title>
+    <style>
+        form { 
+            border: 1px dotted;
+            margin: 5px;
+            padding: 5px; /* margem interna */
+            width: 500px; /* largura */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <h1>Todos os INPUTS</h1>
     <form method="get">
-        <label>Campo de texto</label>
-        <input type="text" name="nome" />
+        <label for="nome">Digite seu nome</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" />
+        <br>
+        <label for="nascimento">Nascimento</label>
+        <input type="date" name="nascimento" id="nascimento" placeholder="Nascimento" />
+        <br>
+        <label for="peso">Peso</label>
+        <input type="number" name="peso" id="peso" placeholder="Peso" />
+        <br>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" placeholder="Senha" />
+        <br>
+        <label for="nivel">Nível</label>
+        <input type="range" name="nivel" id="nivel" placeholder="Nível" />
+        <br>
+        <label>Estado civil</label>
+        <br> <!-- nesse caso nao precisa de id apenas repita name-->
+        <input type="radio" name="estado_civil"/>
+        <label for="estado_civil">Solteiro</label>
+        <input type="radio" name="estado_civil"/>
+        <label for="estado_civil">Casado</label>
+        <br>
+        <label for="estado">Estado</label>
+        <select name="estado" id="estado" >
+            <option>Escolha um estado</option>
+            <option value="PI">Piauí</option>
+            <option value="PE">Pernanbuco</option>
+            <option value="SP">São Paulo</option>
+            <option value="SC">Santa Catarina</option>
+        </select>
+        <br>
+        <label>Escolha um ou mais pratos favoritos</label>
+        <br> <!-- nesse caso nao precisa de id apenas repita name-->
+        <input type="checkbox" name="prato" value="macarrao"/>
+        <label for="prato">Macarrão</label>
+        <br>
+        <input type="checkbox" name="prato" value="pastel"/>
+        <label for="prato">Pastel</label>
+        <br>
+        <input type="checkbox" name="prato" value="arroz_feijao"/>
+        <label for="prato">Arroz e Feijão</label>
+        <br>
+        <input type="submit" value="Enviar" />
     </form>
 </body>
 </html>
