@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function download(data, filename, type) {
+  // 1. Cria um objeto Blob com os dados e o tipo MIME.
+  const file = new Blob([data], {type: type});
+
+  // 2. Cria um elemento <a> dinamicamente.
+  const a = document.createElement("a");
+
+  // 3. Gera uma URL para o Blob.
+  const url = URL.createObjectURL(file);
+
+  // 4. Configura os atributos do link.
+  a.href = url;
+  a.download = filename;
+
+  // 5. Adiciona o link ao corpo do documento e simula um clique.
+  document.body.appendChild(a);
+  a.click();
+
+  // 6. Remove o link e revoga a URL para liberar memória.
+  setTimeout(function() {
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+  }, 0);
+}
+
+// Exemplo de uso:
+// Chame a função para salvar um arquivo JSON.
+download(JSON.stringify({ "nome": "exemplo", "valor": 123 }), "meu_arquivo.json", "application/json");
+  </script>
+</body>
+</html>
